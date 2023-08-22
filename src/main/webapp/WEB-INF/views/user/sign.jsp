@@ -18,31 +18,31 @@
                         <ul>
                             <li>
                                 <label for="user-id">아이디</label>
-                                <input type="text" id="user-id" name="user-id" placeholder="아이디를 입력하세요." >
+                                <input type="text" id="user-id" name="userId" placeholder="아이디를 입력하세요." >
                             </li>
                             <li>
                                 <label for="user-pw">비밀번호</label>
-                                <input type="password" id="user-pw" name="user-pw" placeholder="비밀번호를 입력하세요." >
+                                <input type="password" id="user-pw" name="userPw" placeholder="비밀번호를 입력하세요." >
                             </li>
                             <li>
                                 <label for="user-name">닉네임</label>
-                                <input type="text" id="user-name" name="user-name" placeholder="닉네임을 입력해주세요.">
+                                <input type="text" id="user-name" name="userName" placeholder="닉네임을 입력해주세요.">
                             </li>
                             <li>
                                 <label for="user-age">나이</label>
-                                <input type="text" id="user-age" name="user-age" placeholder="나이를 입력해주세요.">   
+                                <input type="text" id="user-age" name="userAge" placeholder="나이를 입력해주세요.">   
                             </li>
                             <li>
                                 <label for="user-email">이메일</label>
-                                <input type="email" id="user-email" name="user-email" placeholder="이메일을 입력해주세요.">
+                                <input type="email" id="user-email" name="userEmail" placeholder="이메일을 입력해주세요.">
                             </li>
                             <li>
                                 <label for="user-phone">전화번호</label>
-                                <input type="text" id="user-phone" name="user-phone" placeholder="전화번호 입력해주세요.">
+                                <input type="text" id="user-phone" name="userPhone" placeholder="전화번호 입력해주세요.">
                             </li>
                             <li>
                                 <label for="user-address">주소</label>
-                                <input type="text" id="user-address" name="user-address" placeholder="주소를 입력해주세요.">
+                                <input type="text" id="user-address" name="userAddress" placeholder="주소를 입력해주세요.">
                             </li>
                         </ul>
                         <input type="submit" value="회원가입" id="sign-up">

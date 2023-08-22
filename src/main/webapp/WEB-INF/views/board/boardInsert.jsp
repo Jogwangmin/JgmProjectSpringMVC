@@ -33,6 +33,7 @@
                     </div>
                     <div id="main-mid"></div>
                     <div id="main-bot">
+                    	<input type="file" name="uploadFile">
                         <input type="text" id="write" name="boardContent" placeholder="내용을 입력해 주세요.">
                     </div>
                 </div>
