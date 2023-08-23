@@ -8,7 +8,7 @@
 	</div>
 	<div id="header-3">
 		<c:if test="${sessionScope.userId ne null }">
-			<a href="/user/mypage.do">${userName }님</a>&nbsp;
+			<a href="/user/mypage.do?userId=${userId }">${userName }님</a>&nbsp;
 			<a href="/user/logout.do">로그아웃</a>
 		</c:if>
 		<c:if test="${sessionScope.userId eq null }">

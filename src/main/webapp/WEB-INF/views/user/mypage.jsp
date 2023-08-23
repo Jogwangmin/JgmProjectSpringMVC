@@ -20,7 +20,7 @@
                     </div>
                     <div id="profile-option">
                         <ul id="option">
-                            <li><a href="/user/myInfo.do?user-id=${userId }">정보수정</a></li>
+                            <li><a href="/user/update.do?userId=${userId }">정보수정</a></li>
                             <li><a href="posts.jsp">내가 쓴 글</a></li>
                             <li><a href="follow.jsp">즐겨찾기</a></li>
                         </ul>

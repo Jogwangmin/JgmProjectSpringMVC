@@ -25,7 +25,11 @@
 		DELTE USER_TBL WHERE USER_ID = #{userId }
 	</delete>
 	
-	<select id="selectCheckLogin" resultMap="userResultMap">
+	<select id="selectOneById" resultMap="userResultMap">
+		SELECT * FROM USER_TBL WHERE USER_ID = #{userId }
+	</select>
+	
+	<select id="selectUserLogin" resultMap="userResultMap">
 		SELECT * FROM USER_TBL WHERE USER_ID = #{userId } AND USER_PW = #{userPw }
 	</select>
 </mapper>

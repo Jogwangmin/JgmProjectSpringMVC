@@ -71,9 +71,11 @@ public class User {
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
 	}
+
 	@Override
 	public String toString() {
-		return "���� [���̵�=" + userId + ", ��й�ȣ=" + userPw + ", �г���=" + userName + ", ����=" + userAge
-				+ ", �̸���=" + userEmail + ", ��ȭ��ȣ=" + userPhone + ", �ּ�=" + userAddress + "]";
+		return "User [userId=" + userId + ", userPw=" + userPw + ", userName=" + userName + ", userAge=" + userAge
+				+ ", userEmail=" + userEmail + ", userPhone=" + userPhone + ", userAddress=" + userAddress + "]";
 	}
+	
 }

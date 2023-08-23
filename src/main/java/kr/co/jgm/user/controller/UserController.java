@@ -18,10 +18,6 @@ public class UserController {
 	
 	@Autowired
 	private UserService service;
-	@RequestMapping(value="/user/myInfo.do", method=RequestMethod.GET)
-	public String showMyInfo() {
-		return "user/myInfo";
-	}
 	
 	@RequestMapping(value="/user/register.do", method=RequestMethod.GET)
 	public String showRegisterForm() {
@@ -50,6 +46,15 @@ public class UserController {
 		}
 	}
 	
+	@RequestMapping(value="/user/update.do", method=RequestMethod.GET)
+	public String showMyInfo(
+			String userId
+			, Model model) {
+		User user = service.getUserById(userId);
+		model.addAttribute("user", user);
+		return "user/modify";
+	}
+
 	@RequestMapping(value="/user/update.do", method=RequestMethod.POST)
 	public String modifyUser(@ModelAttribute User user, Model model) {
 		try {
@@ -145,7 +150,7 @@ public class UserController {
 				model.addAttribute("user", user);
 				return "user/mypage";
 			}else {
-				model.addAttribute("msg", "");
+				model.addAttribute("msg", "회원정보 조회에 실패했습니다.");
 				model.addAttribute("error", "");
 				model.addAttribute("url", "/index.jsp");
 				return "common.errorPage";
