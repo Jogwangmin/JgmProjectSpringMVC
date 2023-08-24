@@ -5,7 +5,9 @@
 	<ul id="top-ul">
 		<li id="top-li">
 			<c:if test="${sessionScope.userId ne null }"> 
-				<a href="/user/mypage.do?userId=${userId }">마이페이지</a>
+				<form action="/user/mypage.do" method="post">
+					<a href="/user/mypage.do">마이페이지</a>
+				</form>
 			</c:if>
 			<c:if test="${sessionScope.userId eq null }" >
 				<a href="/user/login.do">로그인</a>

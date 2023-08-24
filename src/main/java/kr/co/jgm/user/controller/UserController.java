@@ -46,11 +46,16 @@ public class UserController {
 		}
 	}
 	
-	@RequestMapping(value="/user/update.do", method=RequestMethod.GET)
+	@RequestMapping(value="/user/update.do", method= {RequestMethod.GET, RequestMethod.POST})
 	public String showMyInfo(
-			String userId
+//			String userId
+			HttpSession session
 			, Model model) {
-		User user = service.getUserById(userId);
+		String userId = (String)session.getAttribute("userId");
+		User user = null;
+		if(userId != "" && userId != null) {
+			user = service.getUserById(userId);
+		}
 		model.addAttribute("user", user);
 		return "user/modify";
 	}
@@ -62,13 +67,13 @@ public class UserController {
 			if(result > 0) {
 				return "redirect:/index.jsp";
 			}else {
-				model.addAttribute("msg", "");
-				model.addAttribute("error", "");
+				model.addAttribute("msg", "회원 정보 수정을 실패하였습니다.");
+				model.addAttribute("error", "회원 정보 수정 실패");
 				model.addAttribute("url", "/user/mypage.do?userId"+user.getUserId());
 				return "common.errorPage";
 			}
 		} catch (Exception e) {
-			model.addAttribute("msg", ".");
+			model.addAttribute("msg", "오류발생");
 			model.addAttribute("error", e.getMessage());
 			model.addAttribute("url", "/index.jsp");
 			return "common/errorPage";
@@ -140,12 +145,17 @@ public class UserController {
 		}
 	}
 	
-	@RequestMapping(value="/user/mypage.do", method=RequestMethod.GET)
+	@RequestMapping(value="/user/mypage.do", method= {RequestMethod.GET, RequestMethod.POST})
 	public String showMyPage(
-			@RequestParam("userId") String userId
+//			@RequestParam("userId") String userId
+			HttpSession session
 			, Model model) {
 		try {
-			User user = service.getUserById(userId);
+			String userId = (String)session.getAttribute("userId");
+			User user = null;
+			if(userId != "" && userId != null) {
+				user = service.getUserById(userId);
+			}
 			if(user != null) {
 				model.addAttribute("user", user);
 				return "user/mypage";

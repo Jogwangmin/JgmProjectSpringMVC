@@ -15,12 +15,17 @@
                 <div id="profile">
                     <div id="follower-count"><p>팔로워 : <strong>100명</strong> 팔로잉 : <strong>3명</strong></p></div>
                     <div id="profile-info">
+<%--                   		<img alt="프로필 사진" src="../resources/buploadFiles/${board.boardFilename }" id="profile-picture"> --%>
                         <img src="../resources/images/user.png" alt="프로필 사진" id="profile-picture">
-                        <div id="profile-name">홍길동</div>
+                        <div id="profile-name">${userName }</div>
                     </div>
                     <div id="profile-option">
                         <ul id="option">
-                            <li><a href="/user/update.do?userId=${userId }">정보수정</a></li>
+                            <li>
+	                        	<form action="/user/update.do" method="post">
+	    	                        <a href="/user/update.do">정보수정</a>
+    	                    	</form>
+                            </li>
                             <li><a href="posts.jsp">내가 쓴 글</a></li>
                             <li><a href="follow.jsp">즐겨찾기</a></li>
                         </ul>

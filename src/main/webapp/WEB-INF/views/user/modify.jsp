@@ -23,38 +23,38 @@
                             <ul>
                                 <li>
                                     <label for="user-id">아이디</label>
-                                    <input type="text" id="user-id" name="user-id" value="${user.userId }" readonly>
+                                    <input type="text" id="user-id" name="userId" value="${user.userId }" readonly>
                                     <input type="button" id="change" value="변경">
                                 </li>
                                 <li>
                                     <label for="user-pw">비밀번호</label>
-                                    <input type="password" id="user-pw" name="user-pw" value="${user.userPw }">
+                                    <input type="password" id="user-pw" name="userPw" value="${user.userPw }">
                                     <input type="button" id="change" value="확인">
                                 </li>
                                 <li>
                                     <label for="user-name">닉네임</label>
-                                    <input type="text" id="user-name" name="user-name" value="${user.userName }">
+                                    <input type="text" id="user-name" name="userName" value="${user.userName }">
                                     <input type="button" id="change" value="변경">
                                 </li>
                                 <li>
                                     <label for="user-age">나이</label>
-                                    <input type="text" id="user-age" name="user-age" value="${user.userAge }" readonly>   
+                                    <input type="text" id="user-age" name="userAge" value="${user.userAge }" readonly>   
                                     <input type="button" id="change" value="변경">
                                 </li>
                                 
                                 <li>
                                     <label for="user-email">이메일</label>
-                                    <input type="email" id="user-email" name="user-email" value="${user.userEmail }">
+                                    <input type="email" id="user-email" name="userEmail" value="${user.userEmail }">
                                     <input type="button" id="change" value="변경">
                                 </li>
                                 <li>
                                     <label for="user-phone">전화번호</label>
-                                    <input type="text" id="user-phone" name="user-phone" value="${user.userPhone }">
+                                    <input type="text" id="user-phone" name="userPhone" value="${user.userPhone }">
                                     <input type="button" id="change" value="변경">
                                 </li>
                                 <li>
                                     <label for="user-address">주소</label>
-                                    <input type="text" id="user-address" name="user-address" value="${user.userAddress }">
+                                    <input type="text" id="user-address" name="userAddress" value="${user.userAddress }">
                                     <input type="button" id="change" value="변경">
                                 </li>
                             </ul>
